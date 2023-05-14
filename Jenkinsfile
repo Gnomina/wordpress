@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Example') {
       steps {
-        sh 'echo $GITHUB_CREDENTIALS'
+        sh 'echo "ALL Done"'
       }
     }
   }
