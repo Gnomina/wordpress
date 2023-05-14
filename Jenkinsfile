@@ -12,6 +12,7 @@ pipeline {
             steps{
               sh 'terraform init'
               sh 'terraform validate'
+              sh 'terraform apply'
 
             }
         }
