@@ -1,13 +1,12 @@
 pipeline {
-  agent any
-  environment {
-    GITHUB_CREDENTIALS = credentials('github-creds')
-  }
-  stages {
-    stage('Example') {
-      steps {
-        sh 'echo "ALL Done"'
-      }
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                echo 'Hello World_1_2'
+            }
+        }
     }
-  }
 }
