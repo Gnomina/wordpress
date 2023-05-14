@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Clone repo') {
             steps {
-                git 'https://github.com/Gnomina/wordpress.git'
+                git 'git@github.com:Gnomina/wordpress.git'
             }
         }
         stage('Terraform init') {
