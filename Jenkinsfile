@@ -4,17 +4,28 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
-                echo 'Hello World_1_2'
+                echo 'Terraform test'
+                
             }
         }
-        stage('terraform'){
-            steps{
-              sh 'terraform init'
-              sh 'terraform validate'
-              sh 'terraform apply'
-
+        stage('Terraform init') {
+            steps {
+                sh 'terraform init'
+                echo 'ok'
             }
         }
-    }
+        stage('Terraform plan') {
+            steps {
+                sh 'terraform plan'
+                echo 'ok'
+            }
+        }
+        stage('Terraform apply') {
+            steps {
+                sh 'terraform apply'
+                echo 'ok'
+            }
+        }
+        
+      }
 }      
