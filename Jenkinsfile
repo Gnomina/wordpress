@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Clone repo') {
             steps {
-                git 'https://github.com/Gnomina/wordpress.git'
+               git branch: 'main', url: 'https://github.com/Gnomina/wordpress.git'
             }
         }
         
